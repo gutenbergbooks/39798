@@ -1,0 +1,584 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Strict//EN'
+    'http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg common docutils stylesheet.
+
+  This stylesheet contains styles common to HTML and EPUB.  Put styles
+  that are specific to HTML and EPUB into their relative stylesheets.
+
+  :Author: Marcello Perathoner (webmaster@gutenberg.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  This stylesheet is based on:
+
+  :Author: David Goodger (goodger@python.org)
+  :Copyright: This stylesheet has been placed in the public domain.
+
+  Default cascading style sheet for the HTML output of Docutils.
+
+  */
+
+  /* ADE 1.7.2 chokes on !important and throws all css out. */
+
+  /* FONTS */
+
+  .italics    { font-style: italic }
+  .no-italics { font-style: normal }
+
+  .bold       { font-weight: bold }
+  .no-bold    { font-weight: normal }
+
+  .small-caps { } /* Epub needs italics */
+  .gesperrt   { } /* Epub needs italics */
+  .antiqua    { font-style: italic } /* what else can we do ? */
+  .monospaced { font-family: monospace }
+
+  .smaller    { font-size: smaller }
+  .larger     { font-size: larger }
+
+  .xx-small   { font-size: xx-small }
+  .x-small    { font-size: x-small }
+  .small      { font-size: small }
+  .medium     { font-size: medium }
+  .large      { font-size: large }
+  .x-large    { font-size: x-large }
+  .xx-large   { font-size: xx-large }
+
+  .text-transform-uppercase { text-transform: uppercase }
+  .text-transform-lowercase { text-transform: lowercase }
+  .text-transform-none      { text-transform: none }
+
+  .red        { color: red }
+  .green      { color: green }
+  .blue       { color: blue }
+  .yellow     { color: yellow }
+  .white      { color: white }
+  .gray       { color: gray }
+  .black      { color: black }
+
+  /* ALIGN */
+
+  .left       { text-align: left }
+  .justify    { text-align: justify }
+  .center     { text-align: center; text-indent: 0 }
+  .centerleft { text-align: center; text-indent: 0 }
+  .right      { text-align: right;  text-indent: 0 }
+
+  /* LINE HEIGHT */
+
+  body        { line-height: 1.5 }
+  p           { margin: 0; 
+              text-indent: 2em }
+
+  /* PAGINATION */
+
+  .title, .subtitle     { page-break-after:  avoid }
+
+  .container, .title, .subtitle, #pg-header            
+                      { page-break-inside: avoid }
+
+  /* SECTIONS */
+
+  body         { text-align: justify }
+
+  p.pfirst, p.noindent { 
+    text-indent: 0 
+  }
+
+  .boxed         { border: 1px solid black; padding: 1em }
+  .topic, .note  { margin: 5% 0; border: 1px solid black; padding: 1em }
+  div.section    { clear: both }
+
+  div.line-block       { margin: 1.5em 0 }  /* same leading as p */
+  div.line-block.inner { margin: 0 0 0 10% }
+  div.line             { margin-left: 20%; text-indent: -20%; }
+  .line-block.noindent div.line { margin-left: 0; text-indent: 0; }
+
+  hr.docutils          { margin: 1.5em 40%; border: none; border-bottom: 1px solid black; }
+  div.transition       { margin: 1.5em 0 }
+
+  .vfill, .vspace      { border: 0px solid white }
+
+  .title               { margin: 1.5em 0 }
+  .title.with-subtitle { margin-bottom: 0 }
+  .subtitle            { margin: 1.5em 0 }
+
+  /* header font style */
+  /* http://dev.w3.org/csswg/css3-fonts/#propdef-font-size */
+
+  h1.title                        { font-size: 200%; }  /* for book title only */
+  h2.title, p.subtitle.level-1    { font-size: 150%; margin-top: 4.5em;  margin-bottom: 2em }
+  h3.title, p.subtitle.level-2    { font-size: 120%; margin-top: 2.25em; margin-bottom: 1.25em }
+  h4.title, p.subtitle.level-3    { font-size: 100%; margin-top: 1.5em;  margin-bottom: 1.5em;  font-weight: bold; }
+  h5.title, p.subtitle.level-4    { font-size:  89%; margin-top: 1.87em; margin-bottom: 1.69em; font-style: italic; }
+  h6.title, p.subtitle.level-5    { font-size:  60%; margin-top: 3.5em;  margin-bottom: 2.5em }
+
+  /* title page */
+
+  h1.title, p.subtitle.level-1,
+  h2.title, p.subtitle.level-2    { text-align: center }
+
+  #pg-header,
+  h1.document-title               { margin: 10% 0 5% 0 }
+  p.document-subtitle             { margin:  0  0 5% 0 }
+
+  /* PG header and footer */
+  #pg-machine-header { }
+  #pg-produced-by { }
+
+  li.toc-entry            { list-style-type: none }
+  ul.open li, ol.open li  { margin-bottom: 1.5em }
+
+  .attribution            { margin-top: 1.5em }
+
+  .example-rendered { 
+    margin: 1em 5%; border: 1px dotted red;  padding: 1em; background-color: #ffd }
+  .literal-block.example-source   { 
+    margin: 1em 5%; border: 1px dotted blue; padding: 1em; background-color: #eef }
+
+  /* DROPCAPS */
+
+  /* BLOCKQUOTES */
+
+  blockquote { margin: 1.5em 10% }
+
+  blockquote.epigraph { }
+
+  blockquote.highlights { }
+
+  div.local-contents { margin: 1.5em 10% }
+
+  div.abstract { margin: 3em   10% }
+  div.image    { margin: 1.5em  0  }
+  div.caption  { margin: 1.5em  0 }
+  div.legend   { margin: 1.5em  0 }
+
+  .hidden { display: none }
+
+  .invisible { visibility: hidden; color: white } /* white: mozilla print bug */
+
+  a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+  dl.docutils dd {
+  margin-bottom: 0.5em }
+
+  div.figure { margin-top: 3em; margin-bottom: 3em }
+
+  img { max-width: 100% }
+
+  div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+  div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+  div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+  ol.simple, ul.simple { margin: 1.5em 0 }
+
+  ol.toc-list,    ul.toc-list    { padding-left:  0  }
+  ol ol.toc-list, ul ul.toc-list { padding-left:  5% }
+
+  ol.arabic {
+  list-style: decimal }
+
+  ol.loweralpha {
+  list-style: lower-alpha }
+
+  ol.upperalpha {
+  list-style: upper-alpha }
+
+  ol.lowerroman {
+  list-style: lower-roman }
+
+  ol.upperroman {
+  list-style: upper-roman }
+
+  p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+  p.label {
+  white-space: nowrap }
+
+  p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+  p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+  p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  p.topic-title, p.admonition-title {
+  font-weight: bold }
+
+  pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+  .literal-block, .doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em; }
+
+  span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+  span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+  span.interpreted {
+  font-family: sans-serif }
+
+  span.option {
+  white-space: nowrap }
+
+  span.pre {
+  white-space: pre }
+
+  span.problematic {
+  color: red }
+
+  span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 100% }
+
+  table { margin-top: 1.5em; margin-bottom: 1.5em; border-spacing: 0 }
+  table.align-left, table.align-right { margin-top: 0 }
+
+  table.table                { border-collapse: collapse; }
+
+  table.table.hrules-table thead          { border: 1px solid black; border-width: 2px 0 0 }
+  table.table.hrules-table tbody          { border: 1px solid black; border-width: 2px 0 }
+  table.table.hrules-rows  tr             { border: 1px solid black; border-width: 0 0 1px }
+  table.table.hrules-rows  tr.last        { border-width: 0 }
+  table.table.hrules-rows  td, 
+  table.table.hrules-rows  th             { padding: 1ex 1em; vertical-align: middle }
+
+  table.table tr             { border-width: 0 }
+  table.table td, 
+  table.table th             { padding: 0.5ex 1em }
+  table.table tr.first td    { padding-top: 1ex }
+  table.table tr.last td     { padding-bottom: 1ex }
+  table.table tr.first th    { padding-top: 1ex }
+  table.table tr.last th     { padding-bottom: 1ex }
+
+
+  table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+  table.docinfo {
+  margin: 3em 4em }
+
+  table.docutils { }
+
+  div.footnote-group          { margin: 1em 0 }
+  table.footnote td.label     { width: 2em; text-align: right; padding-left: 0 }
+
+  table.docutils td, table.docutils th,
+  table.docinfo td, table.docinfo th {
+  padding: 0 0.5em;
+  vertical-align: top }
+
+  table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+  /* used to remove borders from tables and images */
+  .borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+  table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "!important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 } /* FIXME: was !important */
+
+  h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+  h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+  ul.auto-toc {
+  list-style-type: none }
+  /*]]>*/
+  </style>
+  <style type="text/css">
+  /*<![CDATA[*/
+  /* 
+  Project Gutenberg HTML docutils stylesheet.
+
+  This stylesheet contains styles specific to HTML.
+  */
+
+  /* FONTS */
+
+  /* em                { font-style: normal }
+  strong            { font-weight: normal } */
+
+  .small-caps       { font-variant: small-caps }
+  .gesperrt         { letter-spacing: 0.1em }
+
+  /* ALIGN */
+
+  .align-left       { clear: left;
+                    float: left;
+                    margin-right: 1em }
+
+  .align-right      { clear: right;
+                    float: right;
+                    margin-left: 1em }
+
+  .align-center     { margin-left: auto;
+                    margin-right: auto }
+
+  div.shrinkwrap    { display: table; }
+
+  /* SECTIONS */
+
+  body              { margin: 5% 10% 5% 10% }
+
+  /* compact list items containing just one p */
+  li p.pfirst       { margin-top: 0; margin-bottom: 0 } 
+
+  .first            { margin-top: 0 !important; 
+                    text-indent: 0 !important } 
+  .last             { margin-bottom: 0 !important }
+
+  span.dropcap      { float: left; margin: 0 0.1em 0 0; line-height: 1 }
+  img.dropcap       { float: left; margin: 0 0.5em 0 0; max-width: 25% }
+  span.dropspan     { font-variant: small-caps }
+
+  .no-page-break    { page-break-before: avoid !important }
+
+  /* PAGINATION */
+
+  .pageno           { position: absolute; right: 95%; font: medium sans-serif; text-indent: 0 }
+  .pageno:after     { color: gray; content: '[' attr(title) ']' }
+  .lineno           { position: absolute; left:  95%; font: medium sans-serif; text-indent: 0 }
+  .lineno:after     { color: gray; content: '[' attr(title) ']' }
+  .toc-pageref      { float: right }
+
+  @media screen {
+   .coverpage, .frontispiece, .titlepage, .verso, .dedication, .plainpage
+                       { margin: 10% 0; }
+
+   div.clearpage, div.cleardoublepage
+                       { margin: 10% 0; border: none; border-top: 1px solid gray; }
+
+   .vfill              { margin:  5% 10% }
+  }
+
+  @media print {
+   div.clearpage       { page-break-before: always; padding-top: 10% }
+   div.cleardoublepage { page-break-before: right;  padding-top: 10%  }
+
+   .vfill              { margin-top: 20% }
+   h2.title            { margin-top: 20% }
+  }
+
+  /* DIV */
+  pre               { font-family: monospace; font-size: 0.9em; white-space: pre-wrap }
+
+  /*]]>*/
+  </style>
+  <title>IN MEMORABILIA MORTIS</title>
+</head>
+<body>
+  <div class="document" id="in-memorabilia-mortis">
+    <h1 class="center document-title level-1 pfirst title"><span class="x-large">IN MEMORABILIA MORTIS</span></h1><!-- this is the default PG-RST stylesheet -->
+    <!-- figure and image styles for non-image formats -->
+    <!-- default transition -->
+    <!-- default attribution -->
+    <!-- -*- encoding: utf-8 -*- -->
+    <div class="clearpage"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="align-None container titlepage">
+      <p class="center pfirst"><span class="x-large">IN MEMORABILIA MORTIS</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">BY FRANCIS SHERMAN</span></p>
+      <div class="vspace" style="height: 2em"></div>
+      <div class="align-center auto-scaled figure margin" style="width: 39%" id="figure-19">
+        <img class="align-center block center" style="display: block; width: 100%" alt="Decoration" src="images/img-title.jpg" />
+        <div class="caption center centerleft figure-caption margin">
+          <span class="italics">Decoration</span>
+        </div>
+      </div>
+      <div class="vspace" style="height: 2em"></div>
+      <p class="center pfirst"><span class="medium">M DCCC XCVI</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div><!--  -->
+    <blockquote>
+      <div>
+        <div class="line-block outermost">
+          <div class="line">
+            <span>"BUT YE—SHALL I BEHOLD YOU WHEN LEAVES FALL,</span>
+          </div>
+          <div class="line">
+            <span>IN SOME SAD EVENING OP THE AUTUMN-TIDE?"</span>
+          </div>
+        </div>
+      </div>
+    </blockquote>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="x-large">IN MEMORABILIA MORTIS</span></p>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-None container plainpage">
+      <p class="center noindent pfirst"><span class="large">I</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="noindent pfirst"><img class="dropcap inline" style="height: 4.80em" alt="I" src="images/img-001.jpg" /> <span>marked the slow withdrawal of the year,<br />
+      Out on the hills the scarlet maples shone—<br />
+      The glad, first herald of triumphant dawn.<br />
+      A robin's song fell through the silence—clear<br />
+      As long ago it rang when June was here.<br />
+      Then, suddenly, a few grey clouds were drawn<br />
+      Across the sky; and all the song was gone,<br />
+      And all the gold was quick to disappear,<br />
+      That day the sun seemed loth to come again;<br />
+      And all day long the low wind spoke of rain,<br />
+      Far off, beyond the hills; and moaned, like one<br />
+      Wounded, among the pines: as though the Earth,<br />
+      Knowing some giant grief had come to birth,<br />
+      Had wearied of the Summer and the Sun.</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-None container plainpage">
+      <p class="center noindent pfirst"><span class="large">II</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="noindent pfirst"><img class="dropcap inline" style="height: 4.80em" alt="I" src="images/img-002.jpg" /> <span>watched the slow oncoming of the Fall.<br />
+      Slowly the leaves fell from the elms, and lay<br />
+      Along the roadside; and the wind's strange way<br />
+      Was their way, when they heard the wind's far call.<br />
+      The crimson vines that clung along the wall<br />
+      Grew thin as snow that lives on into May;<br />
+      Grey dawn, grey noon,—all things and hours were grey,<br />
+      When quietly the darkness covered all.<br />
+      And while no sunset flamed across the west,<br />
+      And no great moon rose where the hills were low,<br />
+      The day passed out as if it had not been:<br />
+      And so it seemed the year sank to its rest,<br />
+      Remembering naught, desiring naught,—as though<br />
+      Early in Spring its young leaves were not green.</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-None container plainpage">
+      <p class="center noindent pfirst"><span class="large">III</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="noindent pfirst"><img class="dropcap inline" style="height: 4.80em" alt="A" src="images/img-003.jpg" /> <span>little while before the Fall was done<br />
+      A day came when the frail year paused and said:<br />
+      "Behold! a little while and I am dead;<br />
+      Wilt thou not choose, of all the old dreams, one?"<br />
+      Then dwelt I in a garden, where the sun<br />
+      Shone always, and the roses all were red;<br />
+      Far off, the great sea slept, and overhead,<br />
+      Among the robins, matins had begun.<br />
+      And I knew not at all it was a dream<br />
+      Only, and that the year was near its close;<br />
+      Garden and sunshine, robin-song and rose,<br />
+      The half-heard murmur and the distant gleam<br />
+      Of all the unvext sea, a little space<br />
+      Were as a mist above the Autumn's face.</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-None container plainpage">
+      <p class="center noindent pfirst"><span class="large">IV</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="noindent pfirst"><img class="dropcap inline" style="height: 4.80em" alt="A" src="images/img-004.jpg" /><span>nd in this garden sloping to the sea<br />
+      I dwelt (it seemed) to watch a pageant pass,—<br />
+      Great Kings, their armour strong with iron and brass,<br />
+      Young Queens, with yellow hair bound wonderfully.<br />
+      For love's sake, and because of love's decree,<br />
+      Most went, I knew; and so the flowers and grass<br />
+      Knew my steps also: yet I wept Alas,<br />
+      Deeming the garden surely lost to me.<br />
+      But as the days went over, and still our feet<br />
+      Trod the warm, even places, I knew well<br />
+      (For I, as they, followed the close-heard beat<br />
+      Of Love's wide wings who was her sentinel)<br />
+      That here had Beauty built her citadel<br />
+      And only we should reach her mercy-seat.</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-None container plainpage">
+      <p class="center noindent pfirst"><span class="large">V</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="noindent pfirst"><img class="dropcap inline" style="height: 4.80em" alt="A" src="images/img-005.jpg" /><span>nd ye, are ye not with me now alway?—<br />
+      Thy raiment, Glauce, shall be my attire!<br />
+      East of the Sun I, too, seek my desire!<br />
+      My kisses, also, quicken the well-wrought clay!<br />
+      And thou, Alcestis, lest my little day<br />
+      Be done, art glad to die! Upon my pyre,<br />
+      O Brynhild, let thine ashes feed the fire!<br />
+      And, O thou Wood Sun, pray for me, I pray!<br />
+      Yea, ye are mine! Yet there remaineth one<br />
+      Who maketh Summer-time of all the year,<br />
+      Whose glory darkeneth the very sun.<br />
+      For thee my sword was sharpened and my spear,<br />
+      For thee my least poor deed was dreamed and done,<br />
+      O Love, O Queen, O Golden Guenevere!</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <div class="align-None container plainpage">
+      <p class="center noindent pfirst"><span class="large">VI</span></p>
+      <div class="vspace" style="height: 1em"></div>
+      <p class="noindent pfirst"><img class="dropcap inline" style="height: 4.80em" alt="T" src="images/img-006.jpg" /><span>hen, suddenly, I was awake. Dead things<br />
+      Were all about me and the year was dead.<br />
+      Save where the birches grew, all leaves were shed<br />
+      And nowhere fell the sound of song or wings.<br />
+      The fields I deemed were graves of worshipped Kings<br />
+      Had lost their bloom; no honey-bee now fed<br />
+      Therein, and no white daisy bowed its head<br />
+      To harken to the wind's love-murmurings.<br />
+      Yet, by my dream, I know henceforth for me<br />
+      This time of year shall hold some unknown grace<br />
+      When the leaves fall, and shall be sanctified:<br />
+      As April only comes for memory<br />
+      Of him who kissed the veil from Beauty's face<br />
+      That we might see, and passed at Easter-tide.</span></p>
+    </div>
+    <div class="vspace" style="height: 4em"></div>
+    <p class="center pfirst"><span class="medium">These six sonnets IN MEMORABILIA<br />
+    MORTIS, written at Fredericton, New<br />
+    Brunswick, on the third day of October,<br />
+    MDCCCXCVI, by Francis Sherman, are privately<br />
+    printed at the University Press, in Cambridge,<br />
+    Massachusetts, early in December of the same<br />
+    year.</span></p>
+    <div class="align-center auto-scaled figure margin" style="width: 34%" id="figure-20">
+      <img class="align-center block" style="display: block; width: 100%" alt="Decoration" src="images/img-007.jpg" />
+      <div class="caption centerleft figure-caption margin">
+        <span class="italics">Decoration</span>
+      </div>
+    </div>
+    <div class="vspace" style="height: 6em"></div><!-- -*- encoding: utf-8 -*- -->
+    <div class="backmatter"></div>
+    <div class="cleardoublepage"></div>
+  </div>
+</body>
+</html>
